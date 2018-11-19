@@ -151,3 +151,12 @@ func_id,rms,cost,chains,run_id
 
 3. Fitting
 
+fit.py is used to show the pictures of each function.
+
+There are 18 distinct function ids.
+15 functions have only one point in the picture.
+3 functions are asymptotically linear.
+The first function is indexOf, which simulates the Java version.
+The second function is waitForString, the buggy code. It is asymptotically linear.
+The third function is main, which is mainly affected by waitForString.
+
