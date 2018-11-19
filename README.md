@@ -35,6 +35,7 @@ The primary code snippets are listed below:
 2. class StringBuffer: exensible like std::string in C++, implements ```toString, substring, append``` and other helper functions.
 3. waitForString: the buggy code, only focuses on string match parts.
 4. waitForStringPatched: the patched code, only focuses on string match parts.
+5. ```-DBuggy -DPATCH1``` or ```-DPATCH2``` are used in makefile to generate corresponding versions.
 
 The usage is
 
