@@ -1,0 +1,25 @@
+# Apache#34464
+
+CC=clang++
+CXXFLAGS=-std=c++11 -O0 -Xclang -disable-O0-optnone -g -flto -use-gold-plugin -Wl,-plugin-opt=save-temps
+B=BUGGY
+#P1=PATCH1
+#P2=PATCH2
+BUGID=apache34464
+WORKDIR=/home/boqin/Projects/bugs/apache/34464/
+
+.PHONY: all
+all: ${BUGID} #${BUGID}.patch1 ${BUGID}.patch2
+
+${BUGID}: ${WORKDIR}${BUGID}.cpp
+	${CC} -D${B} ${CXXFLAGS} $^ -o $@
+
+#${BUGID}.patch1: ${BUGID}.cpp
+#	${CC} -D${P1} ${CXXFLAGS} $^ -o $@
+
+#${BUGID}.patch2: ${BUGID}.cpp
+#	${CC} -D${P2} ${CXXFLAGS} $^ -o $@ 
+
+.PHONY: clean
+clean:
+	rm -rf *.buggy *.patch1 *.patch2 *.bc *.o
